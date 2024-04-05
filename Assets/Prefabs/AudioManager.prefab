@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4950794891798136790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4950794891798136791}
+  - component: {fileID: 4950794891798136788}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4950794891798136791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950794891798136790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 854.3028, y: 483.85397, z: -347.65994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4950794891798136788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950794891798136790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a798b01fce677744ad30cfd801e973f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: 2e39ee0cf1ccfd042a90e21c48e76df4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    group: {fileID: -8929249535122384, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: GameMusic
+    clip: {fileID: 8300000, guid: a41463b76f873344cb50127c06c8368a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    group: {fileID: -8929249535122384, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: AmbulanceSFX
+    clip: {fileID: 8300000, guid: d756accf28e45094e89b1adac72b8cee, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: CatSFX
+    clip: {fileID: 8300000, guid: d10aecef244067347ab256129833bc95, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: ExplosionSFX
+    clip: {fileID: 8300000, guid: 3902a4f63ca678f40ad65759882d2542, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: FallingSFX
+    clip: {fileID: 8300000, guid: b28d362816ee91e4298f978738fc3443, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: GameOverSFX
+    clip: {fileID: 8300000, guid: 92ceb81c452405e45b47db33fd1cb953, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: FloorHitSFX
+    clip: {fileID: 8300000, guid: e8da992726febaa4da9ce0a09e1efa27, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: MovementSFX
+    clip: {fileID: 8300000, guid: 4d88538dfab78fa45b79ff6d4da90eab, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: PauseSFX
+    clip: {fileID: 8300000, guid: 5203942d31f2c484db2f5a5654eb6173, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: SelectSFX
+    clip: {fileID: 8300000, guid: 095757c2f982c6240897ada55b00f25f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: -1837759603222339968, guid: cfd44e38721187a4492d8e81acb1a0fb, type: 2}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    group: {fileID: 0}
