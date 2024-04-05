@@ -2,6 +2,7 @@ using UnityEngine;
 public class StopSounds : MonoBehaviour
 {
     private AudioSource[] allAudioSources;
+
     public void StopAllAudio()
     {
         allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
@@ -10,4 +11,5 @@ public class StopSounds : MonoBehaviour
             audioS.Stop();
         }
     }
+
 }

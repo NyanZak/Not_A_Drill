@@ -8,10 +8,12 @@ public class velocity : MonoBehaviour
     public static bool pause = false;
     private bool paused = false;
     public Animator animator;
+
     private void Start()
     {
         StartCoroutine("Wait");
     }
+
     IEnumerator Wait()
     {
         gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
@@ -23,6 +25,7 @@ public class velocity : MonoBehaviour
         physics.AddForce(initialVelocity, ForceMode2D.Impulse);
         FindObjectOfType<AudioManager>().Play("FallingSFX");
     }
+
     public void Pause()
     {
         pausedVelocity = GetComponent<Rigidbody2D>().velocity;
@@ -31,6 +34,7 @@ public class velocity : MonoBehaviour
         GetComponent<Rigidbody2D>().isKinematic = true;
         Invoke("Resume", 3f);
     }
+
     public void Resume()
     {
         GetComponent<Rigidbody2D>().isKinematic = false;
@@ -40,6 +44,7 @@ public class velocity : MonoBehaviour
         paused = false;
         Rigidbody2D physics = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
         if (pause == true && paused == false)
@@ -48,4 +53,5 @@ public class velocity : MonoBehaviour
             Pause();
         }
     }
+
 }

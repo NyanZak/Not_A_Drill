@@ -5,6 +5,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public int score, highScore;
     public TMP_Text scoreText, highscoreText, gameOverScoreText, gameoverHighScoreText;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -16,6 +17,7 @@ public class ScoreManager : MonoBehaviour
             gameoverHighScoreText.text = highScore.ToString();
         }
     }
+
     public void AddScore()
     {
         score++;
@@ -23,18 +25,21 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString();
         gameOverScoreText.text = score.ToString();
     }
+
     public void MinusScore()
     {
         score -= 1;
         scoreText.text = score.ToString();
         gameOverScoreText.text = score.ToString();
     }
+
     public void Minus2Score()
     {
         score -= 2;
         scoreText.text = score.ToString();
         gameOverScoreText.text = score.ToString();
     }
+
     public void UpdateHighScore()
     {
         if (score > highScore)
@@ -45,12 +50,14 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", highScore);
         }
     }
+
     public void ResetScore()
     {
         score = 0;
         scoreText.text = score.ToString();
         gameOverScoreText.text = score.ToString();
     }
+
     public void ClearHighScore()
     {
         PlayerPrefs.DeleteKey("HighScore");
@@ -58,4 +65,5 @@ public class ScoreManager : MonoBehaviour
         highscoreText.text = highScore.ToString();
         gameoverHighScoreText.text = highScore.ToString();
     }
+
 }

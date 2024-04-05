@@ -9,11 +9,13 @@ public class GameControl : MonoBehaviour
     public static bool GameIsPaused = false;
     public bool isGameOver = false;
     public GameObject pauseScreen;
+
     private void Awake()
     {
         gameoverPanel.SetActive(false);
         pauseScreen.SetActive(false);
     }
+
     private void Start()
     {
         strikes = 0;
@@ -21,6 +23,7 @@ public class GameControl : MonoBehaviour
         strike2.gameObject.SetActive(true);
         strike3.gameObject.SetActive(true);
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -65,7 +68,9 @@ public class GameControl : MonoBehaviour
                 StartCoroutine("Wait");
                 break;
         }
+
     }
+
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(0.5f);
@@ -73,26 +78,31 @@ public class GameControl : MonoBehaviour
         Time.timeScale = 0f;
         FindObjectOfType<AudioManager>().Play("GameOverSFX");
     }
+
     public void Resume()
     {
         pauseScreen.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
+
     public void Pause()
     {
         pauseScreen.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Resume();
     }
+
     public void Quit()
     {
         SceneManager.LoadScene(0);
         Resume();
     }
+
 }

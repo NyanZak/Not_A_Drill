@@ -8,13 +8,15 @@ public class CloudGenerator : MonoBehaviour
     [SerializeField] float cloudLifetime;
     [SerializeField] GameObject endPoint;
     Vector3 startPos;
-    void Start()
+
+    private void Start()
     {
         startPos = transform.position;
         Prewarm();
         Invoke("AttemptSpawn", spawnInterval);
     }
-    void SpawnCloud(Vector3 startPos)
+
+    private void SpawnCloud(Vector3 startPos)
     {
         int randomIndex = UnityEngine.Random.Range(0, clouds.Length);
         GameObject cloud = Instantiate(clouds[randomIndex]);
@@ -26,12 +28,14 @@ public class CloudGenerator : MonoBehaviour
         cloud.GetComponent<CloudScript>().StartFloating(speed, endPoint.transform.position.x);
         Destroy(cloud, cloudLifetime);
     }
-    void AttemptSpawn()
+
+    private void AttemptSpawn()
     {
         SpawnCloud(startPos);
         Invoke("AttemptSpawn", spawnInterval);
     }
-    void Prewarm()
+
+    private void Prewarm()
     {
         for (int i = 0; i < 10; i++)
         {
@@ -39,4 +43,5 @@ public class CloudGenerator : MonoBehaviour
             SpawnCloud(spawnPos);
         }
     }
+
 }

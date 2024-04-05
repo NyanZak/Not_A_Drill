@@ -9,11 +9,13 @@ public class Spawner : MonoBehaviour
     float timeCounter = 0f;
     public GameObject catPrefab;
     public GameObject tvPrefab;
+
     private void Start()
     {
         timeCounter = Time.time + speedupTime;
         StartCoroutine(SpawnObjectFirst());
     }
+
     IEnumerator SpawnObjectFirst()
     {
         yield return new WaitForSeconds(initialDelay);
@@ -32,6 +34,7 @@ public class Spawner : MonoBehaviour
         }
         StartCoroutine(SpawnObject());
     }
+
     IEnumerator SpawnObject()
     {
         yield return new WaitForSeconds(spawnTimer);
@@ -51,4 +54,5 @@ public class Spawner : MonoBehaviour
         }
         StartCoroutine(SpawnObject());
     }
+
 }

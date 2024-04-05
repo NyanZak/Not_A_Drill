@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 public class LoseScore : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         FindObjectOfType<AudioManager>().Play("FloorHitSFX");
         if (other.gameObject.tag == "Cat")
@@ -21,9 +21,11 @@ public class LoseScore : MonoBehaviour
             Destroy(other.gameObject, 1f);
         }
     }
+
     IEnumerator DelayVelocityPause()
     {
         yield return null;
         velocity.pause = false;
     }
+
 }

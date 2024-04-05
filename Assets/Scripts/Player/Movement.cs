@@ -4,8 +4,9 @@ public class Movement : MonoBehaviour
     public Animator animator;
     [SerializeField]
     GameObject dustCloud;
-   public float speed = 2f;
-    void Update()
+    public float speed = 2f;
+
+    private void Update()
     {
         float x = Input.GetAxis("Horizontal");
         GetComponent<Rigidbody2D>().velocity = new Vector2(x, 0) * speed;
@@ -15,6 +16,7 @@ public class Movement : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("MovementSFX");
         }
     }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Cat")
@@ -27,4 +29,5 @@ public class Movement : MonoBehaviour
             Instantiate(dustCloud, transform.position, dustCloud.transform.rotation);
         }
     }
+
 }

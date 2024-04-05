@@ -4,7 +4,8 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
     public static AudioManager instance;
-    void Awake()
+
+    private void Awake()
     {
         if (instance == null)
             instance = this;
@@ -22,6 +23,7 @@ public class AudioManager : MonoBehaviour
             s.source.loop = s.loop;
         }
     }
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -33,4 +35,5 @@ public class AudioManager : MonoBehaviour
         s.source.pitch = s.pitch;
         s.source.Play();
     }
+
 }
